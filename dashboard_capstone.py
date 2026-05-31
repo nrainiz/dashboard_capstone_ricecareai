@@ -237,7 +237,7 @@ elif halaman == "📊 Explore & Explain Data":
     - Pengecekan file corrupted → **tidak ditemukan**
 
     ⚙️ **Preprocessing:**
-    - Penyeragaman format gambar ke **JPG**
+    - Penyeragaman format gambar ke **JPEG**
     - Konversi mode warna ke **RGB**
     - Resize gambar ke **224×224 piksel**
     """.format(sum(data_hapus.values())))
