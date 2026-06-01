@@ -417,7 +417,6 @@ elif halaman == "📊 Explore & Explain Data":
 
     # ── SECTION 4: GAMBAR TIPIKAL PER KELAS ──
     st.markdown("### 🖼️ Gambar Tipikal per Kelas")
-    st.write("Gambar asli yang paling merepresentasikan karakteristik tiap kelas (dipilih berdasarkan kedekatan ke rata-rata kelas)")
 
     @st.cache_data
     def cari_gambar_tipikal(base_path):
@@ -448,7 +447,16 @@ elif halaman == "📊 Explore & Explain Data":
                 caption=label,
                 use_container_width=True
             )
+    st.info("""
+    **💡 Insight**: Jika dilihat, karakteristik dari tiap kelas memiliki ciri khasnya masing-masing:
 
+    * 🟠 **Blast** — Terdapat bercak coklat di tengah daun.
+    * 🟤 **Brown Spot** — Terdapat bercak bulat kecil berwarna coklat yang tersebar di permukaan daun.
+    * 🟡 **Tungro** — Terdapat warna yang menguning pada daun dan cukup merata.
+    * 🟢 **Healthy** — Tidak ada perubahan warna atau bercak (hijau segar).
+    * ⚫ **Unknown** — Berisi gambar acak yang tidak termasuk kategori daun padi, seperti objek, tanaman lain, atau gambar tidak relevan lainnya.
+    """)
+    
     with st.expander("💡 Apa itu gambar tipikal?"):
         st.info("""
         Gambar tipikal adalah foto asli dari dataset yang paling mendekati rata-rata kelasnya.
